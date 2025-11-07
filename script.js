@@ -9,7 +9,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const email = emailInput.value.trim();
   const message = messageInput.value.trim();
 
-  // Reset previous error styles
   [nameInput, emailInput, messageInput].forEach(input => input.classList.remove('error'));
 
   let valid = true;
@@ -32,7 +31,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     return;
   }
 
-  // Simulate sending message (can be extended to real backend API)
   alert(`Terima kasih, ${name}! Pesan Anda sudah kami terima dan akan segera ditindaklanjuti.`);
   this.reset();
 });
