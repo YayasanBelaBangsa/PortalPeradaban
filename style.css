@@ -1,4 +1,13 @@
-/* Basic Reset */
+:root {
+  --color-primary: #004080;
+  --color-secondary: #0073e6;
+  --color-accent: #ffb400;
+  --color-text: #222;
+  --color-bg: #f9f9f9;
+  --color-white: #fff;
+}
+
+/* Reset dan gaya dasar */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +16,8 @@
 }
 
 body {
-  background: #f9f9f9;
-  color: #222;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-size: 16px;
   line-height: 1.7;
 }
@@ -20,9 +29,10 @@ body {
   padding: 20px 0;
 }
 
+/* Header */
 header {
-  background: #004080;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   padding: 30px 0 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
@@ -54,23 +64,24 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--color-white);
   font-weight: 600;
   letter-spacing: 0.03em;
   font-size: 1rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #ffb400;
+  color: var(--color-accent);
+  outline: none;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to right, #004080, #0073e6);
-  color: white;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
   padding: 100px 0 80px;
   text-align: center;
   font-style: italic;
@@ -96,8 +107,8 @@ main section {
 
 main h2 {
   font-size: 2rem;
-  color: #004080;
-  border-bottom: 3px solid #ffb400;
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-accent);
   padding-bottom: 8px;
   margin-bottom: 25px;
   font-weight: 700;
@@ -105,24 +116,22 @@ main h2 {
 
 .programs-section article,
 .publications-section article {
-  background: #fff;
+  background: var(--color-white);
   padding: 18px 25px;
   margin-bottom: 15px;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  outline: none;
 }
 
 .programs-section article:hover,
-.publications-section article:hover {
+.publications-section article:hover,
+.programs-section article:focus,
+.publications-section article:focus {
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-}
-
-.programs-section h3,
-.publications-section h3 {
-  color: #0073e6;
-  margin-bottom: 10px;
-  font-weight: 700;
+  transform: translateY(-5px);
 }
 
 /* Partners Section */
@@ -139,8 +148,8 @@ main h2 {
 }
 
 .partners-logos span {
-  background: #004080;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   font-weight: 700;
   padding: 15px 25px;
   border-radius: 25px;
@@ -151,13 +160,14 @@ main h2 {
 
 .partners-logos span:hover,
 .partners-logos span:focus {
-  background-color: #ffb400;
-  color: #004080;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  outline: none;
 }
 
 /* Contact Form */
 .contact-section form {
-  background: #fff;
+  background: var(--color-white);
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
@@ -187,7 +197,7 @@ form textarea {
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-  border-color: #0073e6;
+  border-color: var(--color-secondary);
   outline: none;
 }
 
@@ -197,9 +207,9 @@ form textarea {
 
 form button {
   margin-top: 22px;
-  background-color: #ffb400;
+  background-color: var(--color-accent);
   border: none;
-  color: #004080;
+  color: var(--color-primary);
   font-weight: 700;
   font-size: 1.15rem;
   padding: 14px 30px;
@@ -215,6 +225,13 @@ form button:hover,
 form button:focus {
   background-color: #e6a200;
   color: #002855;
+  outline: none;
+}
+
+/* Input error style */
+input.error, textarea.error {
+  border-color: #e53935;
+  background-color: #ffebee;
 }
 
 /* Footer */
@@ -237,5 +254,24 @@ footer {
   .partners-logos {
     flex-direction: column;
     gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 60px 0 40px;
+  }
+
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    width: 95%;
+    padding: 10px 0;
   }
 }
