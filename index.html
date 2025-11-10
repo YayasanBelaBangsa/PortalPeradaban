@@ -8,6 +8,7 @@
   <meta name="author" content="Yayasan Bela Bangsa" />
   <title>Portal Peradaban - Yayasan Bela Bangsa</title>
 
+  <!-- Preload Google Fonts -->
   <link
     rel="preload"
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -29,6 +30,10 @@
       <nav aria-label="Navigasi Utama">
         <ul>
           <li><a href="#hero">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#programs">Program Aktivitas</a></li>
+          <li><a href="#publications">Publikasi</a></li>
+          <li><a href="#partners">Mitra Kegiatan</a></li>
           <li><a href="#contact">Kontak</a></li>
         </ul>
       </nav>
@@ -36,25 +41,81 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section id="hero" class="hero-section" role="banner" tabindex="-1">
       <div class="container hero-content">
         <h1>Empowerment</h1>
         <p>Mendorong penguatan komunitas melalui pelatihan, pengembangan UMKM, dan kegiatan sosial budaya.</p>
         <blockquote>
-          “Bersama langkah kecil kita mengubah masa depan. Wujudkan perubahan melalui pendidikan, sosial, dan pemberdayaan.”
+          "Bersama langkah kecil kita mengubah masa depan. Wujudkan perubahan melalui pendidikan, sosial, dan pemberdayaan."
         </blockquote>
       </div>
     </section>
 
-    <section id="content-area" tabindex="-1" aria-label="Konten utama">
+    <!-- Tentang Kami -->
+    <section id="about" aria-labelledby="about-title" tabindex="-1">
       <div class="container">
-        <h2>Judul Tulisan Baru Anda</h2>
-        <p>Isi paragraf pertama tulisan Anda di sini...</p>
-        <p>Paragraf kedua dan seterusnya bisa ditambahkan dengan mudah.</p>
+        <h2 id="about-title">Tentang Kami</h2>
+        <p>Yayasan Bela Bangsa adalah organisasi sosial kemasyarakatan yang berkomitmen memajukan bangsa melalui kegiatan yang fokus pada pendidikan, kesehatan, sosial, dan pemberdayaan ekonomi masyarakat.</p>
+        <p>Kami menyelenggarakan perpustakaan komunitas, pelatihan literasi, serta penerbitan jurnal ilmiah yang mendukung pengembangan ilmu pengetahuan.</p>
+        <p>Menyediakan akses layanan kesehatan dasar, promosi kesehatan tradisional, dan kegiatan sosial kemasyarakatan.</p>
       </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-title" tabindex="-1">
+    <!-- Program Aktivitas -->
+    <section id="programs" class="programs-section" aria-labelledby="programs-title" tabindex="-1">
+      <div class="container">
+        <h2 id="programs-title">Program Aktivitas</h2>
+        <article>
+          <h3>Pemberdayaan Masyarakat</h3>
+          <p>Mendorong penguatan komunitas melalui pelatihan, pengembangan UMKM, dan kegiatan sosial budaya.</p>
+        </article>
+        <article>
+          <h3>Penelitian & Riset</h3>
+          <p>Menampilkan berbagai artikel ilmiah dan riset yang mendukung pembangunan sosial dan pendidikan.</p>
+        </article>
+        <article>
+          <h3>Literasi & Perpustakaan</h3>
+          <p>Karya-karya penulis lokal yang berkontribusi pada literasi dan pengembangan ilmu pengetahuan di masyarakat.</p>
+        </article>
+        <article>
+          <h3>Opini & Diskusi</h3>
+          <p>Menampilkan tulisan opini terkini sebagai ruang ekspresi pemikiran dan sudut pandang yang beragam.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Publikasi -->
+    <section id="publications" class="publications-section" aria-labelledby="publications-title" tabindex="-1">
+      <div class="container">
+        <h2 id="publications-title">Publikasi</h2>
+        <article>
+          <h3>Jurnal Ilmiah</h3>
+          <p>Berbagai publikasi dan jurnal ilmiah terkait pemberdayaan masyarakat.</p>
+        </article>
+        <article>
+          <h3>Artikel & Berita</h3>
+          <p>Informasi terkini seputar kegiatan yayasan dan berita sosial kemasyarakatan.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mitra Kegiatan -->
+    <section id="partners" class="partners-section" aria-labelledby="partners-title" tabindex="-1">
+      <div class="container">
+        <h2 id="partners-title">Mitra Kegiatan</h2>
+        <p>Kami berkolaborasi dengan berbagai lembaga, komunitas, dan mitra strategis untuk mewujudkan program yang berdampak luas.</p>
+        <div class="partners-logos">
+          <span>Lembaga A</span>
+          <span>Komunitas B</span>
+          <span>Organisasi C</span>
+          <span>Yayasan D</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title" tabindex="-1">
       <div class="container">
         <h2 id="contact-title">Kontak</h2>
         <form id="contact-form" aria-describedby="contact-desc">
