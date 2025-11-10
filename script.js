@@ -5,30 +5,29 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const emailInput = this.email;
   const messageInput = this.message;
 
-  // Trim values
   const name = nameInput.value.trim();
   const email = emailInput.value.trim();
   const message = messageInput.value.trim();
 
-  // Reset previous error styles
+  // Hilangkan kelas error sebelumnya
   [nameInput, emailInput, messageInput].forEach(input => input.classList.remove('error'));
 
   let valid = true;
 
-  // Simple email regex for validation
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  // Validation
+  // Validasi nama
   if (!name) {
     nameInput.classList.add('error');
     valid = false;
   }
 
+  // Validasi email dengan regex sederhana
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !emailPattern.test(email)) {
     emailInput.classList.add('error');
     valid = false;
   }
 
+  // Validasi pesan
   if (!message) {
     messageInput.classList.add('error');
     valid = false;
@@ -39,7 +38,6 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     return;
   }
 
-  // After validation success
   alert(`Terima kasih, ${name}! Pesan Anda sudah kami terima dan akan segera ditindaklanjuti.`);
   this.reset();
 });
