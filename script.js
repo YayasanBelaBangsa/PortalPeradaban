@@ -1,3 +1,4 @@
+
 document.getElementById('contact-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -9,21 +10,25 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const email = emailInput.value.trim();
   const message = messageInput.value.trim();
 
+  // Hilangkan kelas error sebelumnya
   [nameInput, emailInput, messageInput].forEach(input => input.classList.remove('error'));
 
   let valid = true;
 
+  // Validasi nama
   if (!name) {
     nameInput.classList.add('error');
     valid = false;
   }
 
+  // Validasi email dengan regex sederhana
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !emailPattern.test(email)) {
     emailInput.classList.add('error');
     valid = false;
   }
 
+  // Validasi pesan
   if (!message) {
     messageInput.classList.add('error');
     valid = false;
@@ -34,6 +39,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     return;
   }
 
+  // Berhasil
   alert(`Terima kasih, ${name}! Pesan Anda sudah kami terima dan akan segera ditindaklanjuti.`);
   this.reset();
 });
